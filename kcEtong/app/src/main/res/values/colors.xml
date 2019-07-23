@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="white">#ffffff</color>-->
+    <!--<color name="black">#000000</color>-->
+    <!--新增的-->
+    <color name="colorAccent">#0593dc</color>
+    <color name="colorPrimary">#0593dc</color>
+    <color name="colorPrimaryDark">#0593dc</color>
+    <color name="color_00">#8A000000</color>
+    <color name="color_ff">#F0F0F0</color>
+    <color name="main_bg">#f2f2f2</color>
+    <color name="text_gray">#a7a7a7</color>
+    <color name="text_green">#289576</color>
+    <color name="choose_eara_item_press_color">#f4f4f4</color>
+    <color name="text_white">#ffffff</color>
+    <color name="color_EEEEEE">#eeeeee</color>
+    <color name="lighter_green">#99c8b8</color>
+    <color name="light_green">#289576</color>
+    <color name="dark_green">#00744d</color>
+    <color name="main_red">#fc4c4c</color>
+    <color name="light_gray">#efefef</color>
+    <color name="dark_gray">#a7a7a7</color>
+
+    <color name="text_black">#333333</color>
+    <color name="text_blue">#4ab9e7</color>
+    <color name="text_yellow">#ff7d00</color>
+    <color name="text_red">#fe3232</color>
+    <color name="text_orange">#f75431</color>
+    <color name="color_FEFEFE">#FEFEFE</color>
+    <color name="color_E33A3C">#E33A3C</color>
+    <color name="color_4E4C5A">#4E4C5A</color>
+
+    <!--********微信支付 配置*************************************************-->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#ffccddff</color>
+    <color name="transparent">#00000000</color>
+    <color name="navpage">#FFE1E8EB</color>
+    <!--********微信支付 配置*************************************************-->
+
+
+    <!-- **************************************************************************-->
+
+    <color name="chaoshi_grad_btn_4">#3EC6FF</color>
+    <color name="chaoshi_grad_btn_4_press">#1E9FD6</color>
+
+
+    <color name="popup_main_background">#b0000000</color>
+    <color name="no_color">#00000000</color>
+
+    <color name="img_gray">#00000000</color>
+    <color name="tab_bar_unselect">@color/color_686868</color>
+    <color name="color_686868">#686868</color>
+    <color name="tv_blue_color">#087dfe</color>
+    <color name="takeout_left_textcolor">#888888</color>
+    <color name="tab_bar_select">#d32924</color>
+    <color name="background">#F5F5F5</color>
+    <color name="tv_title_color">#fbfcff</color>
+    <color name="takeout_listitem">#e5e6e7</color>
+
+    <color name="home_module">#27251a</color>
+</resources>

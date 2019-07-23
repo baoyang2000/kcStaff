@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="total_price">
+        <item>不限</item>
+        <item>30万以下 </item>
+        <item>30-50万</item>
+        <item>50-80万</item>
+        <item>80-100万</item>
+        <item>100-150万</item>
+        <item>150-200万</item>
+        <item>200-300万</item>
+        <item>300-400万</item>
+        <item>400万以上</item>
+    </string-array>
+    <string-array name="house_type">
+        <item>不限</item>
+        <item>一室 </item>
+        <item>二室</item>
+        <item>三室</item>
+        <item>四室</item>
+        <item>四室以上</item>
+    </string-array>
+    <string-array name="house_area">
+        <item>不限</item>
+        <item>50m²以下</item>
+        <item>50-70m²</item>
+        <item>70-90</item>
+        <item>90-110</item>
+        <item>110-130</item>
+        <item>130-150</item>
+        <item>150-200</item>
+        <item>200-300</item>
+        <item>300-500</item>
+        <item>500m²以上</item>
+    </string-array>
+</resources>

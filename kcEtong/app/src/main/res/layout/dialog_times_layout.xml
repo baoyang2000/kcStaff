@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+              android:paddingBottom="20dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#f0f0f0"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp" >
+
+        <Button
+            android:id="@+id/btn_sub"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_17sp"
+            android:layout_alignParentRight="true"
+            android:textColor="@drawable/selector_time_foodroom_selector"
+             android:background="@android:color/transparent"
+            android:text="@string/btn_ok" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" 
+            android:textSize="@dimen/text_17sp"
+            android:textColor="@color/takeout_left_textcolor"
+            android:text="请选择打赏金额" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:textSize="@dimen/text_17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@drawable/selector_time_foodroom_selector"
+            android:background="@android:color/transparent"
+            android:text="@string/cancel" />
+    </RelativeLayout>
+
+    <com.ctrl.android.kcetong.ui.view.WheelViews
+        android:id="@+id/view_whellview_times"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

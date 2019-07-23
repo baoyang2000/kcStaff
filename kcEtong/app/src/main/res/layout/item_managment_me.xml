@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+              <TextView
+                  android:id="@+id/tv_my"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_marginLeft="30dp"
+                  android:paddingTop="5dp"
+                  android:paddingBottom="5dp"
+                  android:paddingLeft="15dp"
+                  android:paddingRight="15dp"
+                  android:textSize="14sp"
+                  android:layout_toLeftOf="@+id/iv_jiantou"
+                  android:background="@color/white"
+                  android:text="dfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdff"
+                  />
+
+               <ImageView
+                   android:id="@+id/iv_jiantou"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginRight="10dp"
+                   android:layout_toLeftOf="@+id/iv_my"
+                   android:layout_centerVertical="true"
+                   android:src="@drawable/right_jiantou"/>
+
+
+              <com.ctrl.android.kcetong.ui.view.RoundImageView
+                  android:id="@+id/iv_my"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:scaleType="fitXY"
+                  android:layout_centerVertical="true"
+                  android:src="@drawable/touxiang2x"
+                  android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,367 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/main_bg"
+              android:orientation="vertical">
+
+
+    <include android:id="@+id/header"
+             layout="@layout/include_toolbar"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_my_repairs_aftertreament_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/LargeTextSize"/>
+
+                <TextView
+                    android:id="@+id/tv_my_repairs_aftertreament_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/BasicTextSize"/>
+
+                <TextView
+                    android:id="@+id/tv_my_repairs_aftertreament_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/BasicTextSize"/>
+
+                <TextView
+                    android:id="@+id/tv_my_repairs_aftertreament_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/BasicTextSize"/>
+                <LinearLayout
+                    android:id="@+id/layout_voice"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/BasicTextSize"
+                        android:textColor="@color/text_gray"
+                        android:text="报修语音："/>
+                    <RelativeLayout
+                        android:id="@+id/voice_group_top"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerInParent="true"
+                        android:minHeight="30dp"
+                        android:background="@drawable/button_recordnormal"
+                        android:visibility="visible">
+
+                        <View
+                            android:id="@+id/id_anim"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/play_3" />
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/BasicTextSize"
+                        android:textColor="@color/text_gray"
+                        android:layout_marginLeft="10dp"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="报修内容："
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/BasicTextSize"/>
+
+                <TextView
+                    android:id="@+id/tv_my_repairs_aftertreament_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textMultiLine"
+                    android:text=""
+                    android:textColor="@color/text_gray"/>
+
+                <TextView
+                    android:id="@+id/tv_baoxiu_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="实景照片"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/LargeTextSize"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv01_my_repairs_aftertreament"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:background="@color/img_gray"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv02_my_repairs_aftertreament"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/img_gray"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv03_my_repairs_aftertreament"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="@color/img_gray"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_my_repairs_aftertreament_wuye"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/LargeTextSize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="处理结果："
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/BasicTextSize"/>
+
+                <TextView
+                    android:id="@+id/tv_my_repairs_aftertreament_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textMultiLine"
+                    android:text=""
+                    android:textColor="@color/text_gray"/>
+
+                <TextView
+                    android:id="@+id/tv_wuye_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="反馈照片"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/LargeTextSize"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv04_my_repairs_aftertreament"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:background="@color/img_gray"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv05_my_repairs_aftertreament"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/img_gray"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv06_my_repairs_aftertreament"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="@color/img_gray"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="评价"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/LargeTextSize"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_voice2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/BasicTextSize"
+                        android:textColor="@color/text_gray"
+                        android:text="评价语音："/>
+                    <RelativeLayout
+                        android:id="@+id/voice_group_2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerInParent="true"
+                        android:minHeight="30dp"
+                        android:background="@drawable/button_recordnormal"
+                        android:visibility="visible">
+
+
+                        <View
+                            android:id="@+id/id_anim2"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/play_3" />
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tv_time2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/BasicTextSize"
+                        android:textColor="@color/text_gray"
+                        android:layout_marginLeft="10dp"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="评价内容："
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/BasicTextSize"/>
+
+                <TextView
+                    android:id="@+id/tv_my_repairs_aftertreament_pingjia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/tv_shape_green"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/BasicTextSize"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_my_repairs_aftertreament_pingjia_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/edit_shap_gray"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:lines="6"
+                    android:paddingLeft="5dp"
+                    android:text=""
+                    android:textSize="@dimen/BasicTextSize"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

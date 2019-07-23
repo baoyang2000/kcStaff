@@ -1,0 +1,121 @@
+[
+  {
+    "ico": "easy_service",
+    "id": "0",
+    "sort": "1",
+    "num": "0",
+    "title": "便民服务"
+  },
+  {
+    "ico": "unlock_key",
+    "id": "1",
+    "sort": "2",
+    "num": "12",
+    "title": "开锁配钥"
+  },
+  {
+    "ico": "supermarket_drugstore",
+    "id": "2",
+    "sort": "3",
+    "num": "2",
+    "title": "医药超市"
+  },
+  {
+    "ico": "car",
+    "id": "3",
+    "sort": "4",
+    "num": "0",
+    "title": "汽车服务"
+  },
+  {
+    "ico": "express",
+    "id": "4",
+    "sort": "5",
+    "num": "1",
+    "title": "快递代收"
+  },
+  {
+    "ico": "housekeeping",
+    "id": "5",
+    "sort": "6",
+    "num": "4",
+    "title": "家政服务"
+  },
+  {
+    "ico": "lawyer",
+    "id": "6",
+    "sort": "7",
+    "num": "0",
+    "title": "法律援助"
+  },
+  {
+      "ico": "decoration",
+      "id": "7",
+      "sort": "8",
+      "num": "0",
+      "title": "装饰装修"
+  },
+  {
+      "ico": "shengxian",
+      "id": "8",
+      "sort": "9",
+      "num": "0",
+      "title": "生鲜配送"
+  },
+    {
+      "ico": "gift",
+      "id": "9",
+      "sort": "10",
+      "num": "0",
+      "title": "鲜花礼品"
+    },
+    {
+      "ico": "yiliao",
+      "id": "10",
+      "sort": "11",
+      "num": "0",
+      "title": "医疗保健"
+    },
+    {
+      "ico": "zulin",
+      "id": "11",
+      "sort": "12",
+      "num": "0",
+      "title": "租赁服务"
+    },
+    {
+      "ico": "ucmc",
+      "id": "12",
+      "sort": "13",
+      "num": "0",
+      "title": "洗衣连锁"
+    },
+    {
+      "ico": "muying",
+      "id": "13",
+      "sort": "14",
+      "num": "0",
+      "title": "母婴服务"
+    },
+    {
+      "ico": "jiaoyu",
+      "id": "14",
+      "sort": "15",
+      "num": "0",
+      "title": "教育培训"
+    },
+    {
+      "ico": "shuidian",
+      "id": "15",
+      "sort": "16",
+      "num": "0",
+      "title": "水电维修"
+    },
+    {
+      "ico": "banjia",
+      "id": "16",
+      "sort": "17",
+      "num": "0",
+      "title": "搬家服务"
+    }
+]

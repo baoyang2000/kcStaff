@@ -1,0 +1,51 @@
+[
+  {
+    "ico": "unlock",
+    "id": "0",
+    "sort": "1",
+    "num": "0",
+    "title": "开锁"
+  },
+  {
+    "ico": "monitor",
+    "id": "1",
+    "sort": "2",
+    "num": "12",
+    "title": "监控"
+  },
+  {
+    "ico": "call_police",
+    "id": "2",
+    "sort": "3",
+    "num": "2",
+    "title": "安防报警"
+  },
+  {
+    "ico": "smart_home",
+    "id": "3",
+    "sort": "4",
+    "num": "0",
+    "title": "智能家居"
+  },
+  {
+    "ico": "call_property",
+    "id": "4",
+    "sort": "5",
+    "num": "1",
+    "title": "呼叫物业"
+  },
+  {
+    "ico": "dial_plate",
+    "id": "5",
+    "sort": "6",
+    "num": "4",
+    "title": "社区电话"
+  },
+  {
+    "ico": "community_notice",
+    "id": "6",
+    "sort": "7",
+    "num": "0",
+    "title": "社区通知"
+  }
+]

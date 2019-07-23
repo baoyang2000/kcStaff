@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!--header-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/include_toolbar"
+        />
+
+    <LinearLayout
+        android:id="@+id/map_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/map"
+            class="com.baidu.mapapi.map.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/list_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.github.jdsjlzx.recyclerview.LRecyclerView
+            android:id="@+id/pull_to_refresh_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.github.jdsjlzx.recyclerview.LRecyclerView>
+
+    </LinearLayout>
+
+</LinearLayout>

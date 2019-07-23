@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api 'com.android.support:appcompat-v7:27.1.0'
+    api 'com.android.support:design:27.1.0'
+    api 'com.android.support:support-v4:27.1.0'
+    api 'com.squareup.retrofit2:retrofit:2.0.2'
+    api 'com.squareup.retrofit2:converter-gson:2.0.2'
+    api 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    api 'io.reactivex:rxjava:1.1.0'
+    api 'io.reactivex:rxandroid:1.1.0'
+    api 'cn.finalteam:galleryfinal:1.4.8.7'
+    api 'com.mani:ThinDownloadManager:1.2.5'
+    api 'com.daimajia.numberprogressbar:library:1.2@aar'
+    api 'com.github.jdsjlzx:LRecyclerView:1.2.6'
+    api 'com.github.bumptech.glide:glide:3.7.0'
+    api files('libs/android-async-http-1.4.6.jar')
+    api 'com.fasterxml.jackson.core:jackson-databind:2.8.4'
+    api files('libs/alipaySdk-20161129.jar')
+    api 'org.greenrobot:eventbus:3.0.0'
+    api 'com.xhb:xbanner:1.2.2'
+    api files('libs/ShareSDK-Core-2.6.4.jar')
+    api files('libs/MobCommons.jar')
+    api files('libs/happy-dns-0.2.10.jar')
+    api files('libs/qiniuyun-api-zhb.jar')
+    api files('libs/qiniu-android-sdk-7.0.1.jar')
+    api files('libs/universal-image-loader-1.9.5.jar')
+    api 'com.github.chrisbanes.photoview:library:1.2.4'
+    api files('libs/BaiduLBS_Android.jar')
+    api files('libs/ShareSDK-Wechat-Core-2.6.4.jar')
+    api files('libs/ShareSDK-Wechat-2.6.4.jar')
+}

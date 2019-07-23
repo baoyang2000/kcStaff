@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_notice_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ctrl.android.kcetong.ui.activity.NoticeListActivity"
+    android:orientation="vertical"
+    android:background="@color/main_bg">
+    <include layout="@layout/include_toolbar" />
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/recyclerView_notice_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>

@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--主页按钮-->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_10"
+            >
+            <!--top背景部分-->
+
+            <RelativeLayout
+                android:id="@+id/fr_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <com.stx.xhb.xbanner.XBanner
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/banner_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@drawable/default_image"
+                    app:AutoPlayTime="6000"
+                    app:pointsContainerBackground="#44aaaaaa"
+                    app:pointsPosition="CENTER"
+                    />
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/main_property_logo"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/now_community_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:textStyle="bold"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/log_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:text="@string/log_out"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:textStyle="bold"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/change_community_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/change"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.ctrl.android.kcetong.menu.widget.LineGridView
+                    android:id="@+id/gv_lanuch_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:listSelector="#f1f1f1"
+                    android:numColumns="4"
+                    android:padding="0dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <!--开锁-->
+                    <TextView
+                        android:id="@+id/btn_unlocking"
+                        style="@style/main_btn_style"
+                        android:drawableTop="@drawable/unlock"
+                        android:text="@string/unlocking"/>
+
+                    <!-- 监控-->
+                    <TextView
+                        android:id="@+id/monitor"
+                        style="@style/main_btn_style"
+                        android:drawableTop="@drawable/monitor"
+                        android:text="@string/monitor"/>
+
+                    <!--安防报警-->
+                    <TextView
+                        android:id="@+id/call_police"
+                        style="@style/main_btn_style"
+                        android:drawableTop="@drawable/call_police"
+                        android:text="@string/call_police"/>
+
+                    <!--智能家居-->
+                    <TextView
+                        android:id="@+id/smart_home"
+                        style="@style/main_btn_style"
+                        android:drawableTop="@drawable/smart_home"
+                        android:text="@string/smart_home"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <!--呼叫物业-->
+                    <TextView
+                        android:id="@+id/call_property"
+                        style="@style/main_btn_style"
+                        android:drawableTop="@drawable/call_property"
+                        android:text="@string/call_property"/>
+                    <!--社区电话-->
+                    <TextView
+                        android:id="@+id/dial_plate"
+                        style="@style/main_btn_style"
+                        android:drawableTop="@drawable/dial_plate"
+                        android:text="@string/dial_plate"/>
+
+                    <!--个人中心-->
+                    <TextView
+                        android:id="@+id/personal"
+                        style="@style/main_btn_style"
+                        android:drawableTop="@drawable/personal"
+                        android:text="@string/personal"/>
+
+                    <!--社区通知-->
+                    <TextView
+                        android:id="@+id/community_notice"
+                        style="@style/main_btn_style"
+                        android:drawableTop="@drawable/community_notice"
+                        android:text="@string/community_notice"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/home_module_tv"
+                android:text="@string/local_mall"/>
+
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/banner_recycler"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/banner_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+
+            <TextView
+                style="@style/home_module_tv"
+                android:text="@string/community_life"
+                android:visibility="gone"/>
+
+            <com.stx.xhb.xbanner.XBanner
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner_2"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/default_image"
+                android:gravity="bottom"
+                android:visibility="visible"
+                app:AutoPlayTime="6000"
+                app:pointsContainerBackground="#44aaaaaa"
+                app:pointsPosition="CENTER"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/banner_recycler2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <!--<com.ctrl.android.etong.menu.widget.LineGridView-->
+                <!--android:id="@+id/gv_lanuch_start2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/white"-->
+                <!--android:gravity="center"-->
+                <!--android:listSelector="#f1f1f1"-->
+                <!--android:numColumns="4"-->
+                <!--android:padding="0dp"-->
+                <!--android:visibility="visible"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/home_small"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                >
+                <!--便民服务-->
+                <TextView
+                    android:id="@+id/easy_service"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/easy_service"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/easy_service"/>
+
+                <!--<TextView
+                    android:id="@+id/easy_service"
+                    android:background="@color/white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/easy_service"
+                    android:text="@string/easy_service"/>-->
+
+                <!--周边商户-->
+                <LinearLayout
+                    android:id="@+id/surrounding_merchants"
+                    style="@style/home_bottom_linear_layout"
+                    >
+
+                    <ImageView
+                        style="@style/home_bottom_iv"
+                        android:src="@drawable/surrounding_merchants"
+                        />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/line"
+                        />
+
+                    <LinearLayout
+                        style="@style/home_bottom_ll_text"
+                        >
+
+                        <TextView
+                            style="@style/home_bottom_text_big"
+                            android:text="@string/surrounding_merchants"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提供最优质的商户"
+                            android:textSize="@dimen/sp_12"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/home_small"
+                android:layout_marginRight="@dimen/dp_10"
+                android:visibility="gone">
+
+                <!--骑车询价-->
+                <LinearLayout
+                    android:id="@+id/car_inquiry"
+                    style="@style/home_bottom_linear_layout"
+                    >
+
+                    <ImageView
+                        style="@style/home_bottom_iv"
+                        android:src="@drawable/garage"
+                        />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/line"
+                        />
+
+                    <LinearLayout
+                        style="@style/home_bottom_ll_text"
+                        >
+
+                        <TextView
+                            style="@style/home_bottom_text_big"
+                            android:text="汽车询价"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提供最新汽车报价"
+                            android:textSize="@dimen/sp_12"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/home_small"
+                android:layout_marginRight="@dimen/dp_10"
+                android:visibility="gone">
+
+                <!--快递服务-->
+                <LinearLayout
+                    android:id="@+id/express"
+                    style="@style/home_bottom_linear_layout"
+                    >
+
+                    <ImageView
+                        style="@style/home_bottom_iv"
+                        android:src="@drawable/express"
+                        />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/line"
+                        />
+
+                    <LinearLayout
+                        style="@style/home_bottom_ll_text"
+                        >
+
+                        <TextView
+                            style="@style/home_bottom_text_big"
+                            android:text="@string/express"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提供上门快递服务"
+                            android:textSize="@dimen/sp_12"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--租车代驾-->
+                <LinearLayout
+                    android:id="@+id/car_rental_instead_of_driving"
+                    style="@style/home_bottom_linear_layout"
+                    >
+
+                    <ImageView
+                        style="@style/home_bottom_iv"
+                        android:src="@drawable/car"
+                        />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/line"
+                        />
+
+                    <LinearLayout
+                        style="@style/home_bottom_ll_text"
+                        >
+
+                        <TextView
+                            style="@style/home_bottom_text_big"
+                            android:text="@string/car_rental_instead_of_driving"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提供最便利的出行"
+                            android:textSize="@dimen/sp_12"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--养老医疗-->
+                <LinearLayout
+                    android:id="@+id/retirement_care"
+                    style="@style/home_bottom_linear_layout"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        style="@style/home_bottom_iv"
+                        android:src="@drawable/retirement_care"/>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/line"
+                        />
+
+                    <LinearLayout
+                        style="@style/home_bottom_ll_text"
+                        >
+
+                        <TextView
+                            style="@style/home_bottom_text_big"
+                            android:text="@string/retirement_care"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提供最专业的服务"
+                            android:textSize="@dimen/sp_12"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:visibility="gone">
+
+                <!--二手物品-->
+                <LinearLayout
+                    android:id="@+id/second_hand_goods"
+                    style="@style/home_bottom_linear_layout"
+                    >
+
+                    <ImageView
+                        style="@style/home_bottom_iv"
+                        android:src="@drawable/second_hand_goods"
+                        />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/line"
+                        />
+
+                    <LinearLayout
+                        style="@style/home_bottom_ll_text"
+                        >
+
+                        <TextView
+                            style="@style/home_bottom_text_big"
+                            android:text="@string/second_hand_goods"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提供闲置物品互换"
+                            android:textSize="@dimen/sp_12"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/home_module_tv"
+                android:text="@string/community_service"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/home_small"
+                android:layout_marginRight="@dimen/dp_10">
+                <!--社区金融-->
+                <LinearLayout
+                    android:id="@+id/community_finance"
+                    style="@style/home_bottom_linear_layout"
+                    android:visibility="visible"
+                    >
+
+                    <ImageView
+                        style="@style/home_bottom_iv"
+                        android:src="@drawable/finance"
+                        />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/line"
+                        />
+
+                    <LinearLayout
+                        style="@style/home_bottom_ll_text"
+                        >
+
+                        <TextView
+                            style="@style/home_bottom_text_big"
+                            android:text="@string/community_finance"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提供最安全的金融"
+                            android:textSize="@dimen/sp_12"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--社区团购-->
+                <LinearLayout
+                    android:id="@+id/community_group_buy"
+                    style="@style/home_bottom_linear_layout"
+                    >
+
+                    <ImageView
+                        style="@style/home_bottom_iv"
+                        android:src="@drawable/group_buy"
+                        />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/line"
+                        />
+
+                    <LinearLayout
+                        style="@style/home_bottom_ll_text"
+                        >
+
+                        <TextView
+                            style="@style/home_bottom_text_big"
+                            android:text="@string/community_group_buy"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提供底价优质产品"
+                            android:textSize="@dimen/sp_12"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/home_small"
+                android:layout_marginRight="@dimen/dp_10"
+                android:visibility="gone">
+
+                <!--律师服务-->
+                <LinearLayout
+                    android:id="@+id/duty_lawyer_service"
+                    style="@style/home_bottom_linear_layout"
+                    >
+
+                    <ImageView
+                        style="@style/home_bottom_iv"
+                        android:src="@drawable/lawyer"
+                        />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/line"
+                        />
+
+                    <LinearLayout
+                        style="@style/home_bottom_ll_text"
+                        >
+
+                        <TextView
+                            style="@style/home_bottom_text_big"
+                            android:text="@string/duty_lawyer_service"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提供律师咨询服务"
+                            android:textSize="@dimen/sp_12"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:visibility="visible">
+
+                <!--物业服务-->
+                <LinearLayout
+                    android:id="@+id/property_service"
+                    style="@style/home_bottom_linear_layout"
+                    >
+
+                    <ImageView
+                        style="@style/home_bottom_iv"
+                        android:src="@drawable/property_service"
+                        />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/line"
+                        />
+
+                    <LinearLayout
+                        style="@style/home_bottom_ll_text"
+                        >
+
+                        <TextView
+                            style="@style/home_bottom_text_big"
+                            android:text="@string/property_service"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提供最放心的物业"
+                            android:textSize="@dimen/sp_12"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--社区医院-->
+                <LinearLayout
+                    android:id="@+id/community_hospital"
+                    style="@style/home_bottom_linear_layout"
+                    >
+
+                    <ImageView
+                        style="@style/home_bottom_iv"
+                        android:src="@drawable/hospital"
+                        />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/line"
+                        />
+
+                    <LinearLayout
+                        style="@style/home_bottom_ll_text"
+                        >
+
+                        <TextView
+                            style="@style/home_bottom_text_big"
+                            android:text="@string/community_hospital"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提供家庭医生服务"
+                            android:textSize="@dimen/sp_12"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--社区商城-->
+                <LinearLayout
+                    android:id="@+id/community_mall"
+                    style="@style/home_bottom_linear_layout"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        style="@style/home_bottom_iv"
+                        android:src="@drawable/community_mall"
+                        />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/line"
+                        />
+
+                    <LinearLayout
+                        style="@style/home_bottom_ll_text"
+                        >
+
+                        <TextView
+                            style="@style/home_bottom_text_big"
+                            android:text="@string/community_mall"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提供最便捷的服务"
+                            android:textSize="@dimen/sp_12"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/complaint_repair"
+                    style="@style/inside_ll_style">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/repair"/>
+
+                    <View
+                        style="@style/inside_line"
+                        />
+
+                    <TextView
+                        style="@style/inside_tv_style"
+                        android:text="@string/repair"/>
+                </LinearLayout>
+                <!--物业缴费-->
+                <LinearLayout
+                    android:id="@+id/payment"
+                    style="@style/inside_ll_style"
+                    android:layout_marginLeft="@dimen/dp_10">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/payment"
+                        />
+
+                    <View
+                        style="@style/inside_line"
+                        />
+
+                    <TextView
+                        style="@style/inside_tv_style"
+                        android:text="@string/payment"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/community_act"
+                    style="@style/inside_ll_style">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/act"
+                        />
+
+                    <View
+                        style="@style/inside_line"
+                        />
+
+                    <TextView
+                        style="@style/inside_tv_style"
+                        android:text="@string/community_act"
+                        />
+                </LinearLayout>
+                <!--社区调查-->
+                <LinearLayout
+                    android:id="@+id/community_survey"
+                    style="@style/inside_ll_style"
+                    android:layout_marginLeft="@dimen/dp_10">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/survey"
+                        />
+
+                    <View
+                        style="@style/inside_line"
+                        />
+
+                    <TextView
+                        style="@style/inside_tv_style"
+                        android:text="@string/community_survey"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:visibility="gone">
+                <!--物业通知-->
+                <LinearLayout
+                    android:id="@+id/property_notice"
+                    style="@style/inside_ll_style">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/notice"
+                        />
+
+                    <View
+                        style="@style/inside_line"
+                        />
+
+                    <TextView
+                        style="@style/inside_tv_style"
+                        android:text="@string/property_notice"
+                        />
+                </LinearLayout>
+                <!--社区论坛-->
+                <LinearLayout
+                    android:id="@+id/community_bbs"
+                    style="@style/inside_ll_style"
+                    android:layout_marginLeft="@dimen/dp_10">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bbs"/>
+
+                    <View
+                        style="@style/inside_line"/>
+
+                    <TextView
+                        style="@style/inside_tv_style"
+                        android:text="@string/community_bbs"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

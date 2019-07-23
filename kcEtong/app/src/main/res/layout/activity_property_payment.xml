@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_property_payment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ctrl.android.kcetong.ui.activity.PropertyPaymentActivity">
+    <!--header-->
+    <include android:id="@+id/header"
+             layout="@layout/include_toolbar"
+        />
+
+    <!--房屋列表-->
+    <ListView
+        android:layout_below="@+id/header"
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="@dimen/list_divier"
+        android:footerDividersEnabled="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:divider="@null">
+    </ListView>
+</RelativeLayout>

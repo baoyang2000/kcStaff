@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_notice_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    tools:context="com.ctrl.android.kcetong.ui.activity.NoticeDetailActivity"
+    android:orientation="vertical">
+    <!--header-->
+    <include
+        layout="@layout/include_toolbar"/>
+    <!--标题-->
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/between_element_margin"
+        android:layout_marginTop="@dimen/activity_padding_smaller"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding">
+
+        <TextView
+            android:id="@+id/tv_notice_detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text=""
+            android:textSize="@dimen/LargestTextSize"/>
+
+        <TextView
+            android:id="@+id/tv_notice_detail_releaser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/activity_padding_smaller"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/LargeTextSize"/>
+
+    </LinearLayout>
+    <!--公告内容-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_qianshou"
+        android:layout_below="@+id/title_layout"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <WebView
+                android:id="@+id/tv_notice_detail_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="left"
+                android:padding="@dimen/activity_padding_small"
+                android:textSize="@dimen/LargeTextSize"/>
+
+            <ImageView
+                android:id="@+id/iv_notice_detail_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:scaleType="fitXY"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--签收按钮-->
+    <LinearLayout
+        android:id="@+id/ll_qianshou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_bg"
+        android:gravity="bottom"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/between_element_margin"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/activity_padding">
+
+            <TextView
+                android:id="@+id/tv_notice_detail_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_small"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/LargeTextSize"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

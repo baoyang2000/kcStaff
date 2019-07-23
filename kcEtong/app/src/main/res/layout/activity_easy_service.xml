@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--主页按钮-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_bg"
+                android:orientation="vertical"
+                >
+                <!--top背景部分-->
+                <com.stx.xhb.xbanner.XBanner
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/banner_easy_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/banner"
+                    app:pointsPosition="CENTER"
+                    app:AutoPlayTime="6000"
+                    app:pointsContainerBackground="#44aaaaaa"
+                    />
+                <TextView
+                    style="@style/inside_title"
+                    android:drawableLeft="@drawable/inside_icon"
+                    android:text="@string/easy_service"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginBottom="8dp">
+                    <!--公交出行-->
+                    <LinearLayout
+                        android:id="@+id/bus"
+                        style="@style/inside_ll_style">
+
+                        <ImageView
+                            android:src="@drawable/bus"
+                            style="@style/inside_page_iv"/>
+
+                        <View
+                            style="@style/inside_line"
+                            />
+
+                        <TextView
+                            android:text="@string/bus_info"
+                            style="@style/inside_tv_style"/>
+                    </LinearLayout>
+                    <!--开锁配钥-->
+                    <LinearLayout
+                        android:id="@+id/unlock_key"
+                        style="@style/inside_ll_style"
+                        android:layout_marginLeft="@dimen/dp_10">
+                        <ImageView
+                            style="@style/inside_page_iv"
+                            android:src="@drawable/tianqi"
+                            />
+                        <View
+                            style="@style/inside_line"
+                            />
+
+                        <TextView
+                            style="@style/inside_tv_style"
+                            android:text="@string/tianqi"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginBottom="8dp">
+
+                    <!--水电维修-->
+                    <LinearLayout
+                        android:id="@+id/hydropower_maintenance"
+                        style="@style/inside_ll_style">
+
+                        <ImageView
+                            style="@style/inside_page_iv"
+                            android:src="@drawable/weizhang"/>
+
+                        <View
+                            style="@style/inside_line"
+                            />
+
+                        <TextView
+                            android:text="@string/weizhang"
+                            style="@style/inside_tv_style"/>
+                    </LinearLayout>
+                    <!--管道疏通-->
+                    <LinearLayout
+                        android:id="@+id/rush_pipe"
+                        style="@style/inside_ll_style"
+                        android:layout_marginLeft="@dimen/dp_10">
+
+                        <ImageView
+                            style="@style/inside_page_iv"
+                            android:src="@drawable/jipiao"/>
+
+                        <View
+                            style="@style/inside_line"
+                            />
+
+                        <TextView
+                            android:text="@string/jipiao"
+                            style="@style/inside_tv_style"/>
+                    </LinearLayout>
+                    <!--搬家服务-->
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/moving_service"
+                        style="@style/inside_ll_style"
+                        android:layout_marginLeft="@dimen/dp_10">
+                        <ImageView
+                            style="@style/inside_page_iv"
+                            android:src="@drawable/moving_service"
+                            />
+                        <View
+                            style="@style/inside_line"
+                            />
+
+                        <TextView
+                            style="@style/inside_tv_style"
+                            android:text="@string/moving_service"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginBottom="8dp">
+                    <!--搬家-->
+                    <LinearLayout
+                        android:id="@+id/banjia"
+                        style="@style/inside_ll_style">
+
+                        <ImageView
+                            style="@style/inside_page_iv"
+                            android:src="@drawable/shebao"/>
+
+                        <View
+                            style="@style/inside_line"
+                            />
+
+                        <TextView
+                            android:text="社保查询"
+                            style="@style/inside_tv_style"/>
+                    </LinearLayout>
+
+                    <!--家政服务-->
+                    <LinearLayout
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:id="@+id/housekeeping"
+                        style="@style/inside_ll_style">
+
+                        <ImageView
+                            style="@style/inside_page_iv"
+                            android:src="@drawable/shenghuo"/>
+
+                        <View
+                            style="@style/inside_line"
+                            />
+
+                        <TextView
+                            android:text="生活缴费"
+                            style="@style/inside_tv_style"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginBottom="8dp">
+                    <!--防水堵漏-->
+                    <LinearLayout
+                        android:id="@+id/waterproof_plugging"
+                        style="@style/inside_ll_style"
+                        >
+                        <ImageView
+                            style="@style/inside_page_iv"
+                            android:src="@drawable/yigong"
+                            />
+                        <View
+                            style="@style/inside_line"
+                            />
+
+                        <TextView
+                            style="@style/inside_tv_style"
+                            android:text="义工服务"
+                            />
+                    </LinearLayout>
+                    <!--装饰装修-->
+                    <LinearLayout
+                        android:id="@+id/decoration"
+                        style="@style/inside_ll_style"
+                        android:layout_marginLeft="@dimen/dp_10">
+                        <ImageView
+                            style="@style/inside_page_iv"
+                            android:src="@drawable/zhengce"
+                            />
+                        <View
+                            style="@style/inside_line"
+                            />
+
+                        <TextView
+                            style="@style/inside_tv_style"
+                            android:text="政策法规"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginBottom="8dp">
+
+                    <!--跑腿服务-->
+                    <LinearLayout
+                        android:id="@+id/errand_service"
+                        style="@style/inside_ll_style">
+
+                        <ImageView
+                            style="@style/inside_page_iv"
+                            android:src="@drawable/errand_service"/>
+
+                        <View
+                            style="@style/inside_line"
+                            />
+
+                        <TextView
+                            android:text="@string/errand_service"
+                            style="@style/inside_tv_style"/>
+                    </LinearLayout>
+                    <!--母婴服务-->
+                    <LinearLayout
+                        android:id="@+id/mother_to_child_service"
+                        style="@style/inside_ll_style"
+                        android:layout_marginLeft="@dimen/dp_10">
+                        <ImageView
+                            style="@style/inside_page_iv"
+                            android:src="@drawable/mother_to_child"
+                            />
+                        <View
+                            style="@style/inside_line"
+                            />
+
+                        <TextView
+                            style="@style/inside_tv_style"
+                            android:text="@string/mother_to_child_service"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginBottom="8dp">
+
+                    <!--装饰价格-->
+                    <LinearLayout
+                        android:id="@+id/decoration_price"
+                        style="@style/inside_ll_style">
+
+                        <ImageView
+                            style="@style/inside_page_iv"
+                            android:src="@drawable/decoration_price"/>
+
+                        <View
+                            style="@style/inside_line"
+                            />
+
+                        <TextView
+                            android:text="@string/decoration_price"
+                            style="@style/inside_tv_style"/>
+                    </LinearLayout>
+                    <!--甲醛治理-->
+                    <LinearLayout
+                        android:id="@+id/formaldehyde_treatment"
+                        style="@style/inside_ll_style"
+                        android:layout_marginLeft="@dimen/dp_10">
+                        <ImageView
+                            style="@style/inside_page_iv"
+                            android:src="@drawable/jiaquan_img"
+                            />
+                        <View
+                            style="@style/inside_line"
+                            />
+
+                        <TextView
+                            style="@style/inside_tv_style"
+                            android:text="@string/formaldehyde_treatment"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/bottom_banner"/>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

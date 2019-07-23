@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.ctrl.android.kcetong">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <application
+        android:name="com.ctrl.android.kcetong.CustomApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.GuideActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.StartActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.ctrl.android.kcetong.ui.FloatWindow.FloatWindowService"/>
+
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ActivityRestart"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 百度地图KEY -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="6OovMjbVL6LpF93cCTV94YAdztSPYZ8c"/>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+        </service>
+
+        <!-- 移动统计分析 -->
+        <meta-data
+            android:name="IFLYTEK_APPKEY"
+            android:value="&apos;595f3e62&apos;"/>
+        <meta-data
+            android:name="IFLYTEK_CHANNEL"
+            android:value="Android_Demo"/>
+
+        <!-- 友盟 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5970080ba40fa34514001def"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="xingfuaijia"/>
+
+        <!-- 微信qq分享 -->
+        <activity
+            android:name="com.ctrl.android.kcetong.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <!-- 支付宝支付 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+
+        <!-- 支付宝支付 -->
+        <!-- 微信支付 -->
+        <activity
+            android:name="com.ctrl.android.kcetong.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent"/>
+        <!-- 微信支付 -->
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.ctrl.android.kcetong.ui.jpush.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION"/>
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK"/>
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION"/>
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.ctrl.android.property"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.LoginActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.RegisterActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.FindPasswordActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.MaintabActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.CommunityHomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.LaunchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.NoticeListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ActDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.LaunchActivity2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.NoticeDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.HouseListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.HouseConfirmActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.HousePayActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.MyVisitActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.HousePayHistoryActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.MyVisitDetail"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.HousePayCartActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.BurstVisitActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.VisitAddActivity"/>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.PayStyleActivity2"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ExpressActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ExpressDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.FamillyHotLineListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.MyComplaintActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.HouseListActivity2">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.MyComplaintAddActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.common.TestanroidpicActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.EngagedServiceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.MyOrderServiceActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.EngagedServiceListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.EngagedServiceListOrderActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.MyOrderServicePretreatmentActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.MyOrderServiceAftertreatmentActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ServiceOrderPayStyleActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.EngagedServiceListDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.SurveyListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.SurveyDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.VoteDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.SecondHandActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.BabyDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.DetailToBuyActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.TransferActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ForumActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ForumeListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ForumDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ForumStartNoteActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ForumStartActActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.ImagePagerActivity">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.MyComplaintPretreatmentActivity"/>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ClassifyActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.WantBuyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ExchangeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.HouseInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ProvinceListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.HouseInfoDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ShopAroundFirstActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.EasyShopAroundActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.EasyShopAroundListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.MyRepairsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.MyRepairsPretreatmentActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.MyRepairsAddActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.EStewardActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.EasyBusActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ForumStartActActivity2"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.MySettingActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ChangeUsernameActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ChangeMobileActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ChangePasswordActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.StationWebActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.MyComplaintAftertreatmentActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.MyRepairsAftertreatmentActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.PropertyPaymentActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.StewardDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.CommunityFinanceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.jh.activity.LauncherActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <!-- 主Activity -->
+        <activity
+            android:name="com.jh.activity.MainActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 登录Activity -->
+        <activity
+            android:name="com.jh.activity.LoginActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 配置信息Activity -->
+        <activity
+            android:name="com.jh.activity.ConfigActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 用户信息Activity -->
+        <activity
+            android:name="com.jh.activity.UserInfoActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 注册帐号Activity -->
+        <activity
+            android:name="com.jh.activity.RegisterAccountActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 注册成为业主Activity -->
+        <activity
+            android:name="com.jh.activity.RegisterOwnerActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 家属授权Activity -->
+        <activity
+            android:name="com.jh.activity.AuthorizedFamilyActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 城市选择Activity -->
+        <activity
+            android:name="com.jh.activity.SelectCtiyActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 通话界面activity -->
+        <activity
+            android:name="com.jh.activity.VideoScreenActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.jh.activity.ResetActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.jh.activity.UnlockingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.jh.activity.DialActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.jh.activity.MyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 核心服务 -->
+        <service
+            android:name="com.jh.server.JHServer"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="com.jhws.mobilephone.jhServer"/>
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.WebActivity">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.activity.ZhidongActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.PermissionsActivity">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.news.SurroundingMerchantsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.news.PropertyServiceActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.ui.news.EasyServiceActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.menu.MenuManageActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.ctrl.android.kcetong.menu.MenuManageActivity2"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.ServiceDetailActivity">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.ChoiceDetailActivity">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.OrderSubmitActivity">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.OrderPayActivity">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.OrderAddressActivity">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.CreateNewAddressActivity">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.CommentActivity">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.MyOrderActivity">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.MyOrderDetail">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.activity.OrderEvaluateRelease">
+        </activity>
+        <activity android:name="com.ctrl.android.kcetong.ui.SheQuTuangouActivity">
+        </activity>
+    </application>
+
+</manifest>

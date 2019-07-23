@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:slideswitch="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_base"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/rLayoutBar"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:id="@+id/iv_config_back"
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_selector"
+            android:paddingLeft="15dp"/>
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="配置"
+            android:textColor="@color/white_smoke"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rLayoutDonotDisturb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dial_bg_item">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="呼叫免打扰"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.jh.view.SlideSwitch
+            android:id="@+id/sSwitchDonotDisturb"
+            android:layout_width="55.0dip"
+            android:layout_height="25.0dip"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            slideswitch:isOpen="false"
+            slideswitch:shape="rect"
+            slideswitch:themeColor="@color/blue" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rLayoutOnlyWifiVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dial_bg_item">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="仅wifi下开启视频"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.jh.view.SlideSwitch
+            android:id="@+id/sSwitchOnlyWifiVideo"
+            android:layout_width="55.0dip"
+            android:layout_height="25.0dip"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            slideswitch:isOpen="false"
+            slideswitch:shape="rect"
+            slideswitch:themeColor="@color/blue" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">JHDemo</string>
+
+    <string-array name="array_devices_operation_menu">
+        <item>开锁</item>
+        <item>监视</item>
+    </string-array>
+</resources>

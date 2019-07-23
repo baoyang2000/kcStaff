@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              tools:context="com.ctrl.android.kcetong.ui.activity.MyVisitActivity"
+              android:background="@color/main_bg">
+
+    <include layout="@layout/include_toolbar"/>
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/lv_express"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

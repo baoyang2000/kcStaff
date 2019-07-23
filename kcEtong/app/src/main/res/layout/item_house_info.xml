@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ptr="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:padding="10dp"
+              android:layout_height="wrap_content">
+
+
+              <ImageView
+                  android:id="@+id/iv_house_info"
+                  android:layout_width="100dp"
+                  android:layout_height="80dp"
+                  android:scaleType="centerCrop"
+                  android:src="@drawable/default_image"
+                  />
+              <TextView
+                  android:id="@+id/tv_title"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="18sp"
+                  android:layout_toRightOf="@+id/iv_house_info"
+                  android:layout_marginRight="20dp"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginTop="10dp"
+                  android:textColor="@color/text_black"
+                  android:text="gdsgsdhsdghsdghsdkgjsdhgjksdhgjhg"/>
+              <TextView
+                  android:id="@+id/tv_room"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="14sp"
+                  android:layout_toRightOf="@+id/iv_house_info"
+                  android:layout_below="@+id/tv_title"
+                  android:layout_marginRight="20dp"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginTop="10dp"
+                  android:textColor="@color/text_gray"
+                  android:text="gdsgsdhsdghsdg"/>
+              <TextView
+                  android:id="@+id/tv_price"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="16sp"
+                  android:layout_below="@+id/tv_title"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginRight="20dp"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginTop="10dp"
+                  android:textColor="@color/text_yellow"
+                  android:text="$300万"/>
+
+
+
+
+
+</RelativeLayout>

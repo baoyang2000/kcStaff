@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="card_background">#ffffff</color>
+    <color name="card_shadow">#10000000</color>
+    <color name="lite_blue">#ff359ff2</color>
+    <color name="window_background">#00000000</color>
+    <color name="black_de">#DE000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="line">#DEDEDE</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg_dial_plate">#ededed</color>
+    <color name="alert_dialog_line">#c6c6c6</color>
+</resources>

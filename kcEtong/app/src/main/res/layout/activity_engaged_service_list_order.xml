@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:id="@+id/activity_layout"
+              android:background="@color/white"
+              android:layout_height="match_parent">
+    <include layout="@layout/include_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/main_bg">
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/text_black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="服务名称："/>
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/text_black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="服务价格："/>
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/text_black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="预约时间："/>
+    <TextView
+        android:id="@+id/tv_time_content"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/text_black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_shap"
+        />
+
+    <TextView
+        android:id="@+id/tv_backup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/text_black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="备注："/>
+
+    <EditText
+        android:id="@+id/tv_backup_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:paddingLeft="5dp"
+        android:layout_marginRight="20dp"
+        android:lines="4"
+        android:gravity="top"
+        android:textColor="@color/text_black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_shap"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/text_white"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:layout_gravity="center"
+        android:background="@drawable/green_btn_bg"
+        android:text="预约"/>
+
+</LinearLayout>

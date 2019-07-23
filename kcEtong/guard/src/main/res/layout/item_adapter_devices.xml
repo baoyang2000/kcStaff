@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:padding="10dp">
+    <ImageView
+        android:id="@+id/iv_door"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+
+        />
+    <TextView
+        android:id="@+id/tViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:gravity="bottom|center_horizontal"
+        android:layout_marginTop="10dp"
+        tools:text="门口机-1"/>
+
+    <TextView
+        android:id="@+id/tViewAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:visibility="gone"
+        tools:text="000808030001"/>
+
+</LinearLayout>

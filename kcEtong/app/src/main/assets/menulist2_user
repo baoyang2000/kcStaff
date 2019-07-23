@@ -1,0 +1,51 @@
+[
+  {
+    "ico": "easy_service",
+    "id": "0",
+    "sort": "1",
+    "num": "0",
+    "title": "便民服务"
+  },
+  {
+    "ico": "unlock_key",
+    "id": "1",
+    "sort": "2",
+    "num": "12",
+    "title": "开锁配钥"
+  },
+  {
+    "ico": "supermarket_drugstore",
+    "id": "2",
+    "sort": "3",
+    "num": "2",
+    "title": "医药超市"
+  },
+  {
+    "ico": "car",
+    "id": "3",
+    "sort": "4",
+    "num": "0",
+    "title": "汽车服务"
+  },
+  {
+    "ico": "express",
+    "id": "4",
+    "sort": "5",
+    "num": "1",
+    "title": "快递代收"
+  },
+  {
+    "ico": "housekeeping",
+    "id": "5",
+    "sort": "6",
+    "num": "4",
+    "title": "家政服务"
+  },
+  {
+    "ico": "lawyer",
+    "id": "6",
+    "sort": "7",
+    "num": "0",
+    "title": "法律援助"
+  }
+]

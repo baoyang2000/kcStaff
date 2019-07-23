@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NumberPicker">
+        <attr name="normalTextColor" format="color" />
+        <attr name="normalTextSize" format="dimension" />
+        <attr name="selecredTextColor" format="color" />
+        <attr name="selecredTextSize" format="dimension" />
+        <attr name="unitHight" format="dimension" />
+        <attr name="itemNumber" format="integer"/>
+        <attr name="lineColor" format="color" />
+        <attr name="maskHight" format="dimension"/>
+        <attr name="noEmpty" format="boolean"/>
+        <attr name="isEnable" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="TitleView">
+        <attr name="center_text" format="string" />
+        <attr name="center_text_size" format="dimension" />
+        <attr name="center_text_color" format="color" />
+        <attr name="bg_color" format="color" />
+        <attr name="left_visibility" format="string" />
+        <attr name="right_visibility" format="string" />
+        <attr name="left_bg" format="reference" />
+        <attr name="right_bg" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="IconTitleView">
+        <attr name="icenter_text" format="string" />
+        <attr name="icenter_text_size" format="dimension" />
+        <attr name="icenter_text_color" format="color" />
+        <attr name="ibg_color" format="color" />
+        <attr name="ileft_visibility" format="string" />
+        <attr name="iright_visibility" format="string" />
+        <attr name="ileft_src" format="reference" />
+        <attr name="iright_src" format="reference" />
+        <attr name="inear_right_src" format="reference" />
+    </declare-styleable>
+</resources>

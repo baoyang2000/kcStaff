@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_forum"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    tools:context="com.ctrl.android.kcetong.ui.activity.ForumActivity">
+    <include
+        layout="@layout/include_toolbar">
+
+    </include>
+    <!--主体部分-->
+    <LinearLayout
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:background="@color/main_bg">
+
+        <!--商品列表-->
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="@dimen/activity_padding_small"
+            android:footerDividersEnabled="true"
+            android:divider="@null">
+
+        </ListView>
+
+    </LinearLayout>
+</LinearLayout>

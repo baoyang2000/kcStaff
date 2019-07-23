@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0593dc</color>
+    <color name="colorPrimaryDark">#0593dc</color>
+    <color name="colorAccent">#0593dc</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_de">#DE000000</color>
+    <color name="blue">#37a7e9</color>
+    <color name="text_blue">#4ab9e7</color>
+
+    <color name="bg_base">#F3F3F3</color>
+    <color name="white_smoke">#F5F5F5</color>
+
+    <color name="line">#DEDEDE</color>
+    <color name="shape_line">#E6E9EA</color>
+    <color name="grey_dark">#B5B5B5</color>
+
+    <color name="rippelColor">#0099CC</color>
+
+    <color name="text_selected">#0096ff</color>
+    <color name="text_over">#ffb9c4cb</color>
+    <color name="text_default">#ff5b656f</color>
+    <color name="text_disabled">#ffa6b3bf</color>
+    <color name="card_background">#ffffff</color>
+    <color name="card_shadow">#10000000</color>
+    <color name="window_background">#00000000</color>
+    <color name="bg_dial_plate">#ededed</color>
+    <color name="alert_dialog_line">#c6c6c6</color>
+</resources>

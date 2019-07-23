@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/main_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar"/>
+    <!--商品列表-->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="150"
+        android:divider="@null"
+        android:dividerHeight="@dimen/activity_padding_small"
+        android:footerDividersEnabled="true"
+        >
+
+    </ListView>
+
+    <!--下方结算栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:visibility="visible"
+            android:id="@+id/iv_voice"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/voice"/>
+        <EditText
+            android:id="@+id/et_e_house_keeper"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="3"
+            android:background="@drawable/edit_shap"
+            android:hint="请输入您的问题"
+            android:paddingLeft="5dp"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_e_house_keeper_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/green_btn_bg"
+            android:gravity="center"
+            android:text="发送"
+            android:onClick="onClick"
+            android:textColor="@color/text_white"
+            android:textSize="14sp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

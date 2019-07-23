@@ -1,0 +1,315 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/main_bg"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="报修房间："
+                android:textSize="@dimen/LargeTextSize"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="报修类型："
+                android:textSize="@dimen/LargeTextSize"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="语音反馈："
+                android:textSize="@dimen/LargeTextSize"
+                android:visibility="visible"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="报修内容："
+                android:textSize="@dimen/LargeTextSize"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/tv_my_repairs_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textSize="@dimen/LargeTextSize"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="更改"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/BasicTextSize"
+                    />
+            </RelativeLayout>
+
+            <Spinner
+                android:id="@+id/spinner_repairs_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="120dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <com.ctrl.android.kcetong.ui.widget.AudioRecordButton
+                android:id="@+id/voice_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_recordnormal"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                android:minHeight="30dp"
+                android:text="@string/normal"
+                android:textColor="#727272"
+                android:visibility="visible"/>
+
+            <RelativeLayout
+                android:id="@+id/voice_group"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_centerInParent="true"
+                android:minHeight="30dp"
+                android:background="@drawable/button_recordnormal"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/id_receiver_recorder_anim"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/play_3" />
+
+                <TextView
+                    android:id="@+id/voice_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=""
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/id_receiver_recorder_anim"
+                    android:layout_marginLeft="20dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/del_voice"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/comment_pic_default"
+                    android:scaleType="fitCenter"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    />
+            </RelativeLayout>
+            <!--<RelativeLayout
+                android:id="@+id/voice_group_1"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_centerInParent="true"
+                android:minHeight="30dp"
+                android:background="@drawable/button_recordnormal"
+                android:visibility="visible">
+
+                <View
+                    android:id="@+id/id_receiver_recorder_anim_1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/play_3" />
+
+                <TextView
+                    android:id="@+id/voice_time_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=""
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/id_receiver_recorder_anim_1"
+                    android:layout_marginLeft="20dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/del_voice_1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/comment_pic_default"
+                    android:scaleType="fitCenter"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    />
+            </RelativeLayout>-->
+            <EditText
+                android:id="@+id/et_repairs_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_shap_gray"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="6"
+                android:paddingLeft="5dp"
+                android:textSize="@dimen/BasicTextSize"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="30dp"
+        android:text="拍照"
+        android:textSize="@dimen/LargeTextSize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="20dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/upload_layout_1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/green_add_img_icon"
+            >
+
+            <ImageView
+                android:id="@+id/uploadImage1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                />
+
+            <ImageView
+                android:id="@+id/del_up_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/comment_pic_default"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/upload_layout_2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/green_add_img_icon"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/uploadImage2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                />
+
+            <ImageView
+                android:id="@+id/del_up_2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/comment_pic_default"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/upload_layout_3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/green_add_img_icon"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/uploadImage3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                />
+
+            <ImageView
+                android:id="@+id/del_up_3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/comment_pic_default"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

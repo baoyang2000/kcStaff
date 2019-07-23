@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.ctrl.android.kcetong.ui.activity.MyComplaintActivity">
+
+    <include android:id="@+id/header"
+             layout="@layout/include_toolbar"
+        />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <!--全部-->
+        <TextView
+            android:id="@+id/btn_my_repairs_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="全部"
+            android:textColor="@color/text_white"
+            android:background="@drawable/button_left_shap_checked"
+            android:gravity="center"
+            android:textSize="@dimen/LargeTextSize"
+            />
+        <!--处理中-->
+        <TextView
+            android:id="@+id/btn_my_repairs_pending"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="待处理"
+            android:textColor="@color/text_gray"
+            android:background="@drawable/button_center_shap"
+            android:gravity="center"
+            android:textSize="@dimen/LargeTextSize"
+            />
+        <!--已处理-->
+        <TextView
+            android:id="@+id/btn_my_repairs_progressing"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="处理中"
+            android:textColor="@color/text_gray"
+            android:background="@drawable/button_center_shap"
+            android:gravity="center"
+            android:textSize="@dimen/LargeTextSize"
+            />
+        <!--已处理-->
+        <TextView
+            android:id="@+id/btn_my_repairs_progressed"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="已处理"
+            android:textColor="@color/text_gray"
+            android:background="@drawable/button_center_shap"
+            android:gravity="center"
+            android:textSize="@dimen/LargeTextSize"
+            />
+        <!--已结束-->
+        <TextView
+            android:id="@+id/btn_my_repairs_end"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="已结束"
+            android:textColor="@color/text_gray"
+            android:background="@drawable/button_right_shap"
+            android:gravity="center"
+            android:textSize="@dimen/LargeTextSize"
+            />
+    </LinearLayout>
+
+    <!--内容-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_repairs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:flipInterval="400"
+        android:persistentDrawingCache="animation"
+
+        />
+
+
+</LinearLayout>

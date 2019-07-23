@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/merchantmessage_bulletin_inputbox_" >
+
+        <TextView
+            android:id="@+id/tv_hint_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="提示"
+            android:padding="10dp"
+            android:textColor="#0000FF"
+            android:textSize="@dimen/text_14sp" />
+
+        <TextView
+            android:id="@+id/tv_hintContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_hint_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text=""
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/tab_bar_unselect"
+            android:textSize="@dimen/text_14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/tv_hintContent" >
+
+            <TextView
+                android:id="@+id/top_v"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="#E0E0E0" />
+
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/center_v"
+                android:background="@null"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/tab_bar_unselect"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

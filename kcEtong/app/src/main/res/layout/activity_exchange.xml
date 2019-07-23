@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_exchange"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ctrl.android.kcetong.ui.activity.ExchangeActivity">
+    <include layout="@layout/include_toolbar"
+        android:id="@+id/head_toolbar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+        <Button
+            android:id="@+id/btn_second_market"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_green_selector"
+            android:text="闲鱼市场"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/TitleTextSize"/>
+        <Button
+            android:id="@+id/btn_house_info"
+            android:layout_below="@id/btn_second_market"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_green_selector"
+            android:text="房产信息"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/TitleTextSize"/>
+
+    </RelativeLayout>
+</RelativeLayout>

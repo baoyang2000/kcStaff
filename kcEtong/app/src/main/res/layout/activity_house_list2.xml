@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_bg"
+                android:orientation="vertical">
+
+    <!--header-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/include_toolbar"
+        />
+
+    <!--房屋列表-->
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_marginBottom="52dp"
+        android:divider="@null"
+        android:dividerHeight="@dimen/list_divier"
+        android:footerDividersEnabled="true">
+    </com.github.jdsjlzx.recyclerview.LRecyclerView>
+
+    <LinearLayout
+        android:id="@+id/add_house_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/add_house_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_padding_small"
+            android:background="@drawable/gray_dashed_border_shap"
+            android:gravity="center"
+            android:padding="@dimen/activity_padding_small"
+            android:text="+ 新增认证房屋"
+            android:textSize="@dimen/TitleTextSize"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
